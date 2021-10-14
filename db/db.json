@@ -1,0 +1,25 @@
+{
+  "clients": [
+    {
+      "nom": "msldkfldk",
+      "prenom": "sdmlfksdl",
+      "telephone": "dflsdmmkfldk",
+      "mail": "dlfdmlskf@dkfskd.dsfsdl",
+      "id": 1
+    },
+    {
+      "nom": "msldkfldk",
+      "prenom": "sdmlfksdl",
+      "telephone": "dflsdmmkfldk",
+      "mail": "dlfdmlskf@dkfskd.dsfsdl",
+      "id": 2
+    },
+    {
+      "nom": "dkfkdjfksd",
+      "prenom": "sdlfkdklj",
+      "telephone": "sdkjdklfjs",
+      "mail": "remagnavana@gmail.com",
+      "id": 3
+    }
+  ]
+}
