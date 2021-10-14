@@ -1,0 +1,1 @@
+export const password=(value)=>value.length > 6

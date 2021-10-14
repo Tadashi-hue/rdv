@@ -1,6 +1,6 @@
 <template>
   <div class="connexion-client">
-    <form action="" @submit.prevent="authenticate">
+    <form action="" @submit.prevent="authenticateUser">
       <div class="form-field-container">
         <form-field 
             v-for="champ in credentials" 
@@ -41,7 +41,8 @@ export default {
         mdp:{
           label:'Mot de passe :',
           name:'mdp',
-          value:''
+          value:'',
+          password:true
         }
       }
     }
@@ -59,6 +60,17 @@ export default {
             required:helpers.withMessage('votre mot de passe est necessaire pour se connecter', required)
           }
         }
+      }
+    }
+  },
+  methods:{
+    async authenticateUser(){
+      var isValidCredentials=await this.v$.validate();
+      if(isValidCredentials){
+        console.log('checking your credentials ...')
+      }
+      else{
+        console.log('Sorry');
       }
     }
   }

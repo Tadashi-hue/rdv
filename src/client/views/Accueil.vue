@@ -25,5 +25,12 @@ export default {
 </script>
 
 <style>
+.accueil-client button{
+    padding:10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(96, 107, 107);
+    color: white;
+}
 
 </style>

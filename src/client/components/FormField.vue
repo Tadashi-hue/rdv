@@ -1,7 +1,8 @@
 <template>
   <div class="form-field">
       <label for="">{{ champ.label }}</label>
-      <input type="text" v-model="champ.value">
+      <input v-if="champ.password" type="password" v-model="champ.value">
+      <input v-else type="text" v-model="champ.value">
       <div class="error-message" v-for=" error in v[champs][champ.name]['value']['$errors']" :key="error.$uid">
          <p>{{ error.$message }}</p> 
       </div>
@@ -12,6 +13,7 @@
 export default {
     name:'form-field',
     props:['champ','v','champs'],
+
 }
 </script>
 
@@ -25,7 +27,7 @@ export default {
     width:3cm;
     text-align: left;
 }
-.form-field input[type=text]{
+.form-field input[type=text], input[type=password]{
   width:25%;
   padding: 12px 20px;
   margin: 8px auto;
@@ -34,7 +36,7 @@ export default {
   border-radius: 4px;
   box-sizing: border-box;
 }
-.form-field input[type=submit]{
+.form-field input[type=submit] {
     padding: 14px 20px;
     margin: 8px 0;
     border: none;

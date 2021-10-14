@@ -16,6 +16,7 @@
 import useVuelidate from '@vuelidate/core'
 import { required, email, helpers } from '@vuelidate/validators'
 import FormField from '../components/FormField.vue'
+import { password } from'../../utility/customValidators'
 export default {
     name:'inscription-client',
     components:{
@@ -49,6 +50,12 @@ export default {
                     label:'Mail: ',
                     name:'mail',
                     value:''
+                },
+                mdp:{
+                    label:'Mot de passe :',
+                    name:'mdp',
+                    value:'',
+                    password:true
                 }
             }
         }
@@ -75,6 +82,11 @@ export default {
                     value:{
                         required:helpers.withMessage('*Ce champ est obligatoire', required),
                         email:helpers.withMessage('*Veuillez saisir une adresse mail valide ex: example@domaine.com', email),
+                    }
+                },
+                mdp:{
+                    value:{
+                        password:helpers.withMessage('*Le mot de passe doit contenir au moins 6 caractères', password),
                     }
                 }
             }
