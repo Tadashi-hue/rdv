@@ -1,5 +1,6 @@
 <template>
   <div class="connexion">
+    wouhouh!
   </div>
 </template>
 
